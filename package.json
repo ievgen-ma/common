@@ -1,0 +1,23 @@
+{
+  "name": "@imscreener/common",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "types": "./buid/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "clean": "del ./build",
+    "build": "npm run clean && tsc",
+    "pub" : " git add . && git commit -m \"updates\" && npm version patch && npm run build && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "del-cli": "^3.0.1",
+    "node-nats-streaming": "^0.3.2",
+    "typescript": "^4.1.2"
+  }
+}
